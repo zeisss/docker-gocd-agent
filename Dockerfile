@@ -15,4 +15,4 @@ RUN sed -r -i "s/^(GO_SERVER)=(.*)/\1=\$SERVER_PORT_8153_TCP_ADDR/g" /etc/defaul
 
 VOLUME ["/var/lib/go-agent"]
 
-CMD /etc/init.d/go-agent start && tail -F /var/log/go-agent/go-agent.log
+CMD /usr/lib/jvm/java-7-openjdk-amd64/bin/java -jar /usr/share/go-agent/agent-bootstrapper.jar $SERVER_PORT_8153_TCP_ADDR $SERVER_PORT_8153_TCP_PORT
