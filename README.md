@@ -7,7 +7,7 @@ This builds the Go agent, you will also need [a server](https://github.com/extra
 ## Run it
 
     docker pull extraordinaire/docker-gocd-agent
-    docker run -d extraordinaire/docker-gocd-agent -link gocd-server:server
+    docker run -d -link gocd-server:server extraordinaire/docker-gocd-agent
 
 Replace `gocd-server` in the parameter for link with the name of your gocd container,
 which you can find in the last column of `docker ps`
