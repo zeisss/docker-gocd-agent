@@ -14,4 +14,4 @@ which you can find in the last column of `docker ps`
 
 If you're running gocd agent on a different host, simply run the agent container like so
 
-    docker run -d extraordinaire/docker-gocd-agent -e SERVER_PORT_8153_TCP_ADDR=<HOST OF GOCD SERVER>
+    docker run -d extraordinaire/docker-gocd-agent -e SERVER_PORT_8153_TCP_ADDR=<HOST OF GOCD SERVER> -e SERVER_PORT_8153_TCP_PORT=<PORT SERVER LISTENING ON>
